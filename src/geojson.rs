@@ -44,6 +44,7 @@ use std::str::FromStr;
 /// ```
 /// [GeoJSON Format Specification § 3](https://tools.ietf.org/html/rfc7946#section-3)
 #[derive(Clone, Debug, PartialEq)]
+#[cfg_attr(feature = "utoipa", derive(utoipa::ToSchema))]
 pub enum GeoJson {
     Geometry(Geometry),
     Feature(Feature),

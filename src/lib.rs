@@ -428,6 +428,7 @@ pub use conversion::quick_collection;
 ///
 /// [GeoJSON Format Specification § 3.2](https://tools.ietf.org/html/rfc7946#section-3.2)
 #[derive(Clone, Debug, Default, PartialEq)]
+#[cfg_attr(feature = "utoipa", derive(utoipa::ToSchema))]
 pub struct Feature {
     /// Bounding Box
     ///

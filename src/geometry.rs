@@ -259,6 +259,7 @@ impl Serialize for Value {
 /// let geom: geo_types::Geometry<f64> = geometry.try_into().unwrap();
 /// ```
 #[derive(Clone, Debug, PartialEq)]
+#[cfg_attr(feature = "utoipa", derive(utoipa::ToSchema))]
 pub struct Geometry {
     /// Bounding Box
     ///
